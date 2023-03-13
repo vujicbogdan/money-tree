@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap");
+* {
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+}
+/* LOGIN PAGE */
+main {
+  height: 100vh;
+  display: flex;
+}
+main .container {
+  align-items: center;
+}
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main-box img {
+  max-width: 200px;
+}
+.main-box form {
+  width: 30%;
+}
+.main-box form a {
+  color: #8cb050;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin: 20px 0;
+  border-radius: 20px;
+  border: 2px solid #dedede;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  box-shadow: none;
+  border: 2px solid #8cb050;
+}
+.checkbox a {
+  float: right;
+}
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  margin: 40px 0 20px;
+  width: 100%;
+}
+.sign-in:hover {
+  background-color: #8cb050;
+  color: white;
+}
+#register {
+  display: inline-block;
+  margin: 0 auto;
+}
+.modal-email {
+  border-radius: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+}
+.modal-footer a {
+  color: #8cb050;
+  text-decoration: none;
+}
+.modal-footer-links {
+  cursor: pointer;
+}
+.modal-footer a:first-child {
+  margin-right: 30px;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+/* REGISTER PAGE */
+.register-box-heading {
+  margin-top: 10px;
+}
+.register-box h2 {
+  font-weight: 900;
+}
+.register-box h5 {
+  color: #a1a1a1;
+}
+.password-req-list {
+  padding: 0;
+  margin: 0;
+}
+.password-req-list li {
+  list-style: none;
+  display: inline;
+  padding: 0 10px;
+  border-right: 1px solid black;
+  color: red;
+}
+.password-req-list li:first-child {
+  padding-left: 0;
+}
+.password-req-list li:last-child {
+  border-right: none;
+}
+.percentage,
+.register-box-heading {
+  width: 30%;
+}
+.percetage-number {
+  font-size: calc(0.8rem + 0.9vw);
+  font-weight: 900;
+  margin-right: 5px;
+  color: black;
+}
+.percentage p {
+  color: #a1a1a1;
+  margin-bottom: 0;
+}
+
+.line {
+  margin-right: 10px;
+}
+.line::after {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 5px;
+  border-radius: 20px;
+  background-color: #a1a1a1;
+  content: " ";
+}
+.active::after {
+  background-color: #8cb050;
+}
+.container-fluid {
+  padding: 0;
+}
+
+/* USER PAGE */
+header {
+  margin: 0 20px;
+}
+.navbar-items p {
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+#burger-menu {
+  cursor: pointer;
+}
+.main-user {
+  height: 100vh;
+  background-color: #efefef;
+}
+.table {
+  width: 30%;
+  margin: 1rem auto 1rem;
+}
+table {
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+}
+thead {
+  border-bottom: 2px dashed #dedede;
+}
+.table-icon {
+  width: 32px;
+}
+.left-right {
+  width: 20px;
+}
+.pig {
+  text-align: center;
+  padding-top: 20px;
+}
+.pig img {
+  width: 20%;
+}
+.activity {
+  text-align: center;
+}
+.activity a {
+  color: #8cb050;
+}
+
+/* SIDE MENU OVERLAY */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(140, 176, 80);
+  background-color: rgba(140, 176, 80, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: black;
+  font-weight: 900;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* PROGRESS BAR */
+#myProgress {
+  width: 30%;
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+#myBar {
+  width: 5%;
+  height: 30px;
+  background-color: #31aa11;
+  border-radius: 10px;
+}
+#myProgress p {
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  right: 5px;
+  font-weight: 900;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 999px) {
+  .main-box form,
+  .percentage,
+  .register-box-heading {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .table,
+  #myProgress {
+    width: 60%;
+  }
+  .pig img {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-box form,
+  .percentage,
+  .register-box-heading {
+    width: 80%;
+  }
+  .table {
+    width: 60%;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
